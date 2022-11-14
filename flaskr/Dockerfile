@@ -1,16 +1,16 @@
 # syntax=docker/dockerfile:1.4
 FROM --platform=$BUILDPLATFORM python:3.10-alpine AS builder
 
-WORKDIR /app
+WORKDIR /flaskr
 
-COPY requirements.txt /app
+COPY requirements.txt /flaskr
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip3 install -r requirements.txt
 
-COPY . /app
+COPY . /flaskr
 
 ENTRYPOINT ["python3"]
-CMD ["app.py"]
+CMD ["flask --app flaskr"]
 
 FROM builder as dev-envs
 

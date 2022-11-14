@@ -1,7 +1,7 @@
 services:
   web: 
     build:
-      context: app
+      context: flaskr
       target: dev-envs
     stop_signal: SIGINT
     ports: 
