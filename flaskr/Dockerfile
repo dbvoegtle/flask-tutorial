@@ -14,10 +14,10 @@ CMD ["flask --app flaskr"]
 
 FROM builder as dev-envs
 
-RUN <<EOF
-apt update
-apt add git
-EOF
+# RUN <<EOF
+# apt update
+# apt add git
+# EOF
 
 RUN <<EOF
 addgroup -S docker
