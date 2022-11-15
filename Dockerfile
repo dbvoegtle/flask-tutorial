@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1.4
-FROM --platform=$BUILDPLATFORM python:3.10-bullseye
+FROM python:3.10-bullseye
 
 WORKDIR /app
 
