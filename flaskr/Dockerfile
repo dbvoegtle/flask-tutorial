@@ -15,8 +15,8 @@ CMD ["flask --app flaskr"]
 FROM builder as dev-envs
 
 RUN <<EOF
-apk update
-apk add git
+apt update
+apt add git
 EOF
 
 RUN <<EOF
